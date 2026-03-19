@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>LAB 1</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f8;
+            color: #333;
+            text-align: center;
+        }
+
+        .container {
+            margin: 20px;
+        }
+
+        .info {
+            background-color: #ffffff;
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        table {
+            margin: auto;
+            border-collapse: collapse;
+            width: 50%;
+        }
+
+        th {
+            background-color: #007BFF;
+            color: white;
+        }
+
+        td, th {
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .dynamic {
+            margin-top: 20px;
+            font-size: 20px;
+            color: green;
+        }
+
+        button {
+            padding: 10px;
+            margin-top: 10px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="info">
+        <h1>Tomás Arratia</h1>
+        <p><strong>Carrera:</strong> ING Civil industrial</p>
+        <p><strong>Año egreso:</strong> 2027</p>
+        <p><strong>GitHub:</strong> 
+            <a href="https://github.com/tuusuario" target="_blank">Mi perfil</a>
+        </p>
+        <p><strong>Resumen personal:</strong> ING CIVIL INDUSTRIAL GO Y MINOR COMPUTACIÓN.</p>
+    </div>
+
+    <h2>Habilidades</h2>
+    <table>
+        <tr>
+            <th>Habilidad</th>
+            <th>Nivel</th>
+        </tr>
+        <tr>
+            <td>HTML</td>
+            <td>Básico</td>
+        </tr>
+	<tr>
+            <td>JS</td>
+            <td>Básico</td>
+        </tr>
+
+        <tr>
+            <td>Python</td>
+            <td>Intermedio</td>
+        </tr>
+        <tr>
+            <td>SQL</td>
+            <td>Intermedio</td>
+        </tr>
+    </table>
+
+    <h2>Interacción</h2>
+    <input type="text" id="texto" placeholder="Escribe algo">
+    <br>
+    <button onclick="cambiarTexto()">Cambiar mensaje</button>
+
+    <div class="dynamic" id="mensaje">
+        Este texto cambiará
+    </div>
+
+</div>
+
+<script>
+function cambiarTexto() {
+    let valor = document.getElementById("texto").value;
+    document.getElementById("mensaje").innerText = valor;
+}
+</script>
+
+</body>
+</html>
