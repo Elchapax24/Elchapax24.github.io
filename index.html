@@ -1,109 +1,94 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <title>LAB 1</title>
-
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f4f8;
-            color: #333;
-            text-align: center;
-        }
-
-        .container {
-            margin: 20px;
-        }
-
-        .info {
-            background-color: #ffffff;
-            padding: 15px;
-            border-radius: 10px;
-        }
-
-        table {
-            margin: auto;
-            border-collapse: collapse;
-            width: 50%;
-        }
-
-        th {
-            background-color: #007BFF;
-            color: white;
-        }
-
-        td, th {
-            border: 1px solid black;
-            padding: 10px;
-        }
-
-        tr:nth-child(even) {
-            background-color: #f2f2f2;
-        }
-
-        .dynamic {
-            margin-top: 20px;
-            font-size: 20px;
-            color: green;
-        }
-
-        button {
-            padding: 10px;
-            margin-top: 10px;
-        }
-
-    </style>
-</head>
-
-<body>
-
-<div class="container">
-
-    <div class="info">
-        <h1>Tomás Arratia</h1>
-        <p><strong>Carrera:</strong> ING Civil industrial</p>
-        <p><strong>Año egreso:</strong> 2027</p>
-        <p><strong>GitHub:</strong> 
-            <a href="https://github.com/Elchapax24" target="_blank">Mi perfil</a>
-        </p>
-        <p><strong>Resumen personal:</strong> ING CIVIL INDUSTRIAL GO Y MINOR COMPUTACIÓN.</p>
+<div class="container py-4">
+    <!-- Card personal infortmation -->
+    <div class="card shadow-sm mb-4">
+        <div class="card-body">
+            <h1 class="card-title text-center text-primary mb-4">Tomás Arratia</h1>
+            
+            <div class="row">
+                <div class="col-md-6 mx-auto">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <strong>Degreee:</strong> Industrial Eng.
+                        </li>
+                        <li class="list-group-item">
+                            <strong>Finish year:</strong> 2027
+                        </li>
+                        <li class="list-group-item">
+                            <strong>GitHub:</strong> 
+                            <a href="https://github.com/Elchapax24" target="_blank" class="text-decoration-none">
+                                My github
+                            </a>
+                        </li>
+                        <li class="list-group-item">
+                            <strong>About me:</strong> Industrial Enginering at UDLA GO & MINOR Computer science.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <h2>Habilidades</h2>
-    <table>
-        <tr>
-            <th>Habilidad</th>
-            <th>Nivel</th>
-        </tr>
-        <tr>
-            <td>HTML</td>
-            <td>Básico</td>
-        </tr>
-	<tr>
-            <td>JS</td>
-            <td>Básico</td>
-        </tr>
-
-        <tr>
-            <td>Python</td>
-            <td>Intermedio</td>
-        </tr>
-        <tr>
-            <td>SQL</td>
-            <td>Intermedio</td>
-        </tr>
-    </table>
-
-    <h2>Interacción</h2>
-    <input type="text" id="texto" placeholder="Escribe algo">
-    <br>
-    <button onclick="cambiarTexto()">Cambiar mensaje</button>
-
-    <div class="dynamic" id="mensaje">
-        Este texto cambiará
+    <!-- Tabla de habilidades con Bootstrap -->
+    <div class="card shadow-sm mb-4">
+        <div class="card-body">
+            <h2 class="card-title text-center mb-3">Skills</h2>
+            
+            <div class="table-responsive">
+                <table class="table table-striped table-bordered table-hover">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Skill</th>
+                            <th>Level</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>HTML</td>
+                            <td>Basic</td>
+                        </tr>
+                        <tr>
+                            <td>JS</td>
+                            <td>Basic</td>
+                        </tr>
+                        <tr>
+                            <td>Python</td>
+                            <td>Intermediate</td>
+                        </tr>
+                        <tr>
+                            <td>SQL</td>
+                            <td>Intermediate</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </div>
 
+    <!-- Sección de interacción -->
+    <div class="card shadow-sm">
+        <div class="card-body">
+            <h2 class="card-title text-center mb-3">Interaction</h2>
+            
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="texto" class="form-label">Type anything:</label>
+                        <input type="text" class="form-control" id="texto" placeholder="Type anything">
+                    </div>
+                    
+                    <div class="d-grid">
+                        <button onclick="Change text" class="btn btn-primary">
+                            Change message
+                        </button>
+                    </div>
+                    
+                    <div class="alert alert-success mt-3 text-center" id="mensaje" role="alert">
+                        this whill change
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 <script>
@@ -112,6 +97,3 @@ function cambiarTexto() {
     document.getElementById("mensaje").innerText = valor;
 }
 </script>
-
-</body>
-</html>
